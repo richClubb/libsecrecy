@@ -1,9 +1,8 @@
-#ifndef __C_SECRECY__
+#ifndef _C_SECRECY_
 
-#define __C_SECRECY__
+#define _C_SECRECY_
 
 using namespace std;
-
 
 /*
     needs to be constructed and destructed
@@ -12,12 +11,13 @@ using namespace std;
 */
 template <typename T> class SecretValue{
 
-    private:
-        T* ptr;
-        int size;
+private:
+    T val;
+    int size;
 
     public:
-        SecretValue();
+        SecretValue(T value);
+        SecretValue(T value, int size);
         T* expose_value(void);
         ~SecretValue();
 };
