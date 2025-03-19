@@ -27,7 +27,7 @@ void test_basic_float(void)
 
 void run_float_suite(void)
 {
-    CU_pSuite suite = CU_add_suite("C secrecy float tests", 0, 0);
+    CU_pSuite suite = CU_add_suite("C++ secrecy float tests", 0, 0);
     
     CU_add_test(suite, "test of basic float creation and destruction", test_basic_float);
     

@@ -43,9 +43,10 @@ add_executable(
     "${PROJECT_NAME}_unit_tests"
     "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy.cpp"
     "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_int.cpp"
-    "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_array.cpp"
     "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_float.cpp"
+    "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_array.cpp"
     "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_string.cpp"
+    "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_vector.cpp"
 )
 
 target_include_directories(

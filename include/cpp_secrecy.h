@@ -21,7 +21,7 @@ private:
         // Constructor for concrete values
         SecretValue(T value);
         // Constructor for arrays / vectors
-        SecretValue(T value, int size);
+        SecretValue(T *value, int size);
         T* expose_value(void);
         ~SecretValue();
 };
@@ -32,7 +32,7 @@ template <typename T> SecretValue<T>::SecretValue(T val)
     this->size = sizeof(T);
 }
 
-template <typename T> SecretValue<T>::SecretValue(T val, int size)
+template <typename T> SecretValue<T>::SecretValue(T *val, int size)
 {
     // This currently doesn't work. We want to be able to copy the array into the location
     this->ptr = new T(size);
@@ -42,6 +42,7 @@ template <typename T> SecretValue<T>::SecretValue(T val, int size)
     // this size should be in bytes?
     this->size = sizeof(T)*size;
 }
+
 
 template <typename T> T* SecretValue<T>::expose_value()
 {

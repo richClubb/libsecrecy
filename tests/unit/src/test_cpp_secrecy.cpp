@@ -8,9 +8,10 @@ int main(void)
     CU_initialize_registry();
 
     run_int_suite();
-    run_array_suite();
-    run_float_suite();
-    run_string_suite();
+    run_float_suite(); 
+    run_vector_suite(); // has problems
+    run_string_suite(); // just boilerplate
+    run_array_suite(); // just boilerplate
     
     CU_cleanup_registry();
 

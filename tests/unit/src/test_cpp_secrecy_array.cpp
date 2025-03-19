@@ -1,42 +1,42 @@
 #include <CUnit/Basic.h>
 #include <CUnit/CUnit.h>
 
-#include <vector>
-
 #include "cpp_secrecy.h"
 
 void test_basic_array(void)
 {
 
-    std::vector<int> *ptr;
+    int initial[3] = {1, 2, 3};
 
-    // Initialise the initial vector
-    std::vector<int> initial;
-    initial.push_back(1);
-    initial.push_back(2);
-    initial.push_back(3);
-    
-    // create the secret value which should copy the original vector
-    SecretValue< std::vector<int> > value(initial, initial.size());
+    int *ptr;
+    SecretValue<int> value(initial, 3);
 
-    // zero out original vector
     initial[0] = 0;
     initial[1] = 0;
     initial[2] = 0;
 
-    // check value of array is copied correctly
-    std::vector<int> *retrieved = value.expose_value();
+    // check that the exposed value is correct
+    //CU_ASSERT(*value.expose_value() == 1);
 
-    printf("test %d\n", *retrieved);
+    // get the pointer to the secret values
+    ptr = value.expose_value();
 
-    return;
+    // check the value at the pointer is correct
+    CU_ASSERT(*ptr == 1);
+
+    // destroy the secret value
+    value.~SecretValue();
+
+    // check the value at the old memory location is correct
+    CU_ASSERT(*ptr == 0); 
+
 }
 
-void run_array_suite(void)
-{
-    CU_pSuite suite = CU_add_suite("C secrecy array tests", 0, 0);
-    
-    CU_add_test(suite, "test of basic array creation and destruction", test_basic_array);
+void run_array_suite(void){
+
+    CU_pSuite suite = CU_add_suite("C++ secrecy array tests", 0, 0);
+
+    CU_add_test(suite, "test of basic arrays operation", test_basic_array);
     
     CU_basic_run_tests();
 }
