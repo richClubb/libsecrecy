@@ -2,6 +2,8 @@
 
 #define _C_SECRECY_
 
+#include <stdlib.h>
+
 using namespace std;
 
 /*
@@ -35,9 +37,10 @@ template <typename T> SecretValue<T>::SecretValue(T val)
 template <typename T> SecretValue<T>::SecretValue(T *val, int size)
 {
     // This currently doesn't work. We want to be able to copy the array into the location
-    this->ptr = new T(size);
+    //this->ptr = new T(size);
+    this->ptr = (T *)malloc(size*sizeof(T));
 
-    memcpy(this->ptr, &val, sizeof(val));
+    memcpy(this->ptr, val, sizeof(val)*size);
 
     // this size should be in bytes?
     this->size = sizeof(T)*size;
@@ -54,7 +57,7 @@ template <typename T> SecretValue<T>::~SecretValue()
     // zero the memory location
     memset(this->ptr, 0, this->size);
 
-    // data should be automatically deleted
+    // data should be automatically deleted so we don't have to delete the ptr
 }
 
 #endif

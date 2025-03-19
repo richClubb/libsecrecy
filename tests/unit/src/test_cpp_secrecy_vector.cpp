@@ -27,8 +27,6 @@ void test_basic_vector(void)
     // check value of array is copied correctly
     std::vector<int> *retrieved = value.expose_value();
 
-    //printf("test %d\n", *retrieved);
-
     return;
 }
 
@@ -36,7 +34,7 @@ void run_vector_suite(void)
 {
     CU_pSuite suite = CU_add_suite("C++ secrecy vector tests", 0, 0);
     
-    //CU_add_test(suite, "test of basic vector creation and destruction", test_basic_vector);
+    CU_add_test(suite, "test of basic vector creation and destruction", test_basic_vector);
     
     CU_basic_run_tests();
 }

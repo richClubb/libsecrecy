@@ -11,6 +11,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         cppcheck \
         clang lldb \
         llvm gdb \
+        libcunit1 libcunit1-doc libcunit1-dev \
         && apt-get autoremove -y \
         && apt-get clean -y \
         && rm -rf /var/lib/apt/lists/*
