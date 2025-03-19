@@ -9,6 +9,12 @@ project(
     LANGUAGES CXX
 )
 
+set(CXX_STANDARD 11)
+
+#################
+## Main Library
+#################
+
 add_library(
     "${PROJECT_NAME}"
     SHARED
@@ -29,13 +35,17 @@ add_custom_command(
     ${CMAKE_COMMAND} -E copy "lib/lib${PROJECT_NAME}.so" "${PROJECT_SOURCE_DIR}/lib/"
 )
 
-### Unit Tests 
+#################
+## Unit Tests 
+#################
 
 add_executable(
     "${PROJECT_NAME}_unit_tests"
     "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy.cpp"
     "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_int.cpp"
     "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_array.cpp"
+    "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_float.cpp"
+    "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_string.cpp"
 )
 
 target_include_directories(

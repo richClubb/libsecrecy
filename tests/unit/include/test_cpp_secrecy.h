@@ -4,5 +4,7 @@
 
 void run_int_suite(void);
 void run_array_suite(void);
+void run_float_suite(void);
+void run_string_suite(void);
 
 #endif
