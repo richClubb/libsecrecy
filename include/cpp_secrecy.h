@@ -3,6 +3,7 @@
 #define _C_SECRECY_
 
 #include <stdlib.h>
+#include <string>
 
 using namespace std;
 
@@ -21,9 +22,9 @@ private:
 
     public:
         // Constructor for concrete values
-        SecretValue(T value);
+        SecretValue(T val);
         // Constructor for arrays / vectors
-        SecretValue(T *value, int size);
+        SecretValue(T *val, int size);
         T* expose_value(void);
         ~SecretValue();
 };
@@ -56,6 +57,8 @@ template <typename T> SecretValue<T>::~SecretValue()
 {
     // zero the memory location
     memset(this->ptr, 0, this->size);
+
+    // this might not work for certain datatypes. E.g. strings
 
     // data should be automatically deleted so we don't have to delete the ptr
 }

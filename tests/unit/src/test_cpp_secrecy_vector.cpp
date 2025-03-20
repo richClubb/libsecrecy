@@ -26,7 +26,7 @@ void test_basic_vector(void)
 
     // check value of array is copied correctly
     std::vector<int> *retrieved = value.expose_value();
-
+    
     return;
 }
 
