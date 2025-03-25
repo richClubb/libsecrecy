@@ -9,6 +9,8 @@ project(
     LANGUAGES CXX
 )
 
+include(CTest)
+
 set(CXX_STANDARD 11)
 
 #################
@@ -35,37 +37,4 @@ add_custom_command(
     ${CMAKE_COMMAND} -E copy "lib/lib${PROJECT_NAME}.so" "${PROJECT_SOURCE_DIR}/lib/"
 )
 
-#################
-## Unit Tests 
-#################
-
-add_executable(
-    "${PROJECT_NAME}_unit_tests"
-    "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy.cpp"
-    "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_int.cpp"
-    "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_float.cpp"
-    "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_array.cpp"
-    "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_string.cpp"
-    "${PROJECT_SOURCE_DIR}/tests/unit/src/test_cpp_secrecy_vector.cpp"
-)
-
-target_include_directories(
-    "${PROJECT_NAME}_unit_tests" 
-    PRIVATE 
-    "${PROJECT_SOURCE_DIR}/include"
-    "${PROJECT_SOURCE_DIR}/tests/unit/include"
-)
-
-target_link_directories(
-    "${PROJECT_NAME}_unit_tests" 
-    PUBLIC 
-    "${PROJECT_SOURCE_DIR}/lib"
-    "/usr/lib/x86_64-linux-gnu/"
-)
-
-target_link_libraries(
-    "${PROJECT_NAME}_unit_tests" 
-    PUBLIC
-    "cunit"
-    "cpp_secrecy"
-)
+add_subdirectory("${PROJECT_SOURCE_DIR}/tests/unit")

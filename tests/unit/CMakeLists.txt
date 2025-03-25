@@ -21,12 +21,12 @@ set(CXX_STANDARD 11)
 
 add_executable(
     "${PROJECT_NAME}"
-    "${PROJECT_SOURCE_DIR}/src/test_cpp_secrecy.cpp"
-    "${PROJECT_SOURCE_DIR}/src/test_cpp_secrecy_int.cpp"
-    "${PROJECT_SOURCE_DIR}/src/test_cpp_secrecy_float.cpp"
-    "${PROJECT_SOURCE_DIR}/src/test_cpp_secrecy_array.cpp"
-    "${PROJECT_SOURCE_DIR}/src/test_cpp_secrecy_string.cpp"
-    "${PROJECT_SOURCE_DIR}/src/test_cpp_secrecy_vector.cpp"
+    "${PROJECT_SOURCE_DIR}/src/test_unit_cpp_secrecy.cpp"
+    "${PROJECT_SOURCE_DIR}/src/test_unit_cpp_secrecy_int.cpp"
+    "${PROJECT_SOURCE_DIR}/src/test_unit_cpp_secrecy_float.cpp"
+    "${PROJECT_SOURCE_DIR}/src/test_unit_cpp_secrecy_array.cpp"
+    "${PROJECT_SOURCE_DIR}/src/test_unit_cpp_secrecy_string.cpp"
+    "${PROJECT_SOURCE_DIR}/src/test_unit_cpp_secrecy_vector.cpp"
 )
 
 add_test(NAME "${PROJECT_NAME}" COMMAND "${PROJECT_NAME}")
@@ -51,3 +51,4 @@ target_link_libraries(
     "cunit"
     "cpp_secrecy"
 )
+
