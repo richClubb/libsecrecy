@@ -27,6 +27,7 @@ add_executable(
     "${PROJECT_SOURCE_DIR}/src/test_unit_cpp_secrecy_array.cpp"
     "${PROJECT_SOURCE_DIR}/src/test_unit_cpp_secrecy_string.cpp"
     "${PROJECT_SOURCE_DIR}/src/test_unit_cpp_secrecy_vector.cpp"
+    "${PROJECT_SOURCE_DIR}/src/test_unit_cpp_secrecy_custom_struct.cpp"
 )
 
 add_test(NAME "${PROJECT_NAME}" COMMAND "${PROJECT_NAME}")

@@ -7,5 +7,6 @@
     void run_vector_suite();
     void run_string_suite();
     void run_array_suite();
+    void run_custom_struct_suite();
 
 #endif

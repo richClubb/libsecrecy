@@ -12,6 +12,7 @@ int main(void)
     run_vector_suite(); // has problems
     run_string_suite();
     run_array_suite();
+    run_custom_struct_suite();
     
     CU_cleanup_registry();
 
