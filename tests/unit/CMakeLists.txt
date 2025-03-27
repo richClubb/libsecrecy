@@ -42,7 +42,7 @@ target_include_directories(
 target_link_directories(
     "${PROJECT_NAME}" 
     PUBLIC 
-    "${PROJECT_SOURCE_DIR}/../../lib"
+    "${PROJECT_SOURCE_DIR}/../../build/lib"
     "/usr/lib/x86_64-linux-gnu/"
 )
 

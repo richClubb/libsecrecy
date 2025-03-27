@@ -29,12 +29,5 @@ target_include_directories(
     "include"
 )
 
-add_custom_command(
-    TARGET 
-    "${PROJECT_NAME}" 
-    POST_BUILD
-    COMMAND 
-    ${CMAKE_COMMAND} -E copy "lib/lib${PROJECT_NAME}.so" "${PROJECT_SOURCE_DIR}/lib/"
-)
-
 add_subdirectory("${PROJECT_SOURCE_DIR}/tests/unit")
+add_subdirectory("${PROJECT_SOURCE_DIR}/examples/basic")
