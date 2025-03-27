@@ -88,13 +88,11 @@ void test_basic_char_array_2(void)
     CU_ASSERT(*ptr == 0); 
 }
 
-void run_array_suite(void){
+void load_array_suite(void){
 
     CU_pSuite suite = CU_add_suite("C++ secrecy array tests", 0, 0);
 
     CU_add_test(suite, "test of basic int arrays operation", test_basic_int_array);
     CU_add_test(suite, "test of basic char arrays operation", test_basic_char_array);
     CU_add_test(suite, "test of basic char arrays operation 2", test_basic_char_array_2);
-    
-    CU_basic_run_tests();
 }

@@ -3,17 +3,26 @@
 
 #include "test_unit_cpp_secrecy.h"
 
-int main(void)
+int main(int argc, char **argv)
 {
     CU_initialize_registry();
 
-    run_int_suite();
-    run_float_suite();
-    run_vector_suite(); // has problems
-    run_string_suite();
-    run_array_suite();
-    run_custom_struct_suite();
+    load_int_suite();
+    load_float_suite();
+    load_vector_suite(); // has problems
+    load_string_suite();
+    load_array_suite();
+    load_custom_struct_suite();
     
+    if (argc == 1)
+    {
+        CU_basic_run_tests();
+    }
+    else if (argc == 2)
+    {
+        printf("not run, trying to sort out automated tests\n");
+    }
+
     CU_cleanup_registry();
 
     return 0;

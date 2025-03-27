@@ -30,11 +30,9 @@ void test_basic_vector(void)
     return;
 }
 
-void run_vector_suite(void)
+void load_vector_suite(void)
 {
     CU_pSuite suite = CU_add_suite("C++ secrecy vector tests", 0, 0);
     
     CU_add_test(suite, "test of basic vector creation and destruction", test_basic_vector);
-    
-    CU_basic_run_tests();
 }

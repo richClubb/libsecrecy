@@ -67,13 +67,11 @@ void test_basic_u_int16(void)
     CU_ASSERT(*ptr == 0);    
 }
 
-void run_int_suite(void)
+void load_int_suite(void)
 {
     
     CU_pSuite suite = CU_add_suite("C++ secrecy int tests", 0, 0);
     CU_add_test(suite, "test of basic int creation and destruction", test_basic_int);
     CU_add_test(suite, "test of basic u_int8 creation and destruction", test_basic_u_int8);
     CU_add_test(suite, "test of basic u_int16 creation and destruction", test_basic_u_int16);
-    
-    CU_basic_run_tests();
 }

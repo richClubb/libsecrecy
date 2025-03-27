@@ -39,11 +39,9 @@ void test_basic_custom_struct(void)
     CU_ASSERT(*ptr->name == 0);    
 }
 
-void run_custom_struct_suite(void)
+void load_custom_struct_suite(void)
 {
     
     CU_pSuite suite = CU_add_suite("C++ secrecy custom struct tests", 0, 0);
     CU_add_test(suite, "test of basic custom struct creation and destruction", test_basic_custom_struct);
-    
-    CU_basic_run_tests();
 }
