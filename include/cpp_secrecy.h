@@ -1,9 +1,17 @@
-#ifndef _C_SECRECY_
+#ifndef __CPP_SECRECY__
 
-#define _C_SECRECY_
+#define __CPP_SECRECY__
 
+// system
 #include <stdlib.h>
 #include <string>
+
+
+#ifdef __cplusplus
+    #define EXTERN extern "C"
+#else
+    #define EXTERN
+#endif
 
 using namespace std;
 
