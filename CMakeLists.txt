@@ -38,8 +38,11 @@ target_link_libraries(
     "crypto"
 )
 
+## Tests
 add_subdirectory("${PROJECT_SOURCE_DIR}/tests/cpp_tests/unit")
 add_subdirectory("${PROJECT_SOURCE_DIR}/tests/c_tests/unit")
+
+## Examples
 add_subdirectory("${PROJECT_SOURCE_DIR}/examples/cpp/basic")
 add_subdirectory("${PROJECT_SOURCE_DIR}/examples/cpp/cpp_using_c_secrecy")
 add_subdirectory("${PROJECT_SOURCE_DIR}/examples/c/basic")

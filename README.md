@@ -26,7 +26,7 @@ For C++ the implementation is simpler, the secret value is loaded into a private
 
 There are (examples)[/examples] which will show you a basic implementation of the secret values and how they can be used, these are designed for minimal exposure of the secret.
 
-The unit tests for both C and C++ will also provide you with examples although they may not be as 'clean' as they are intended for testing rather than minimal exposure.
+The unit tests for both (C)[tests/c_tests/unit] and (C++)[tests/cpp_tests/unit] will also provide you with examples although they may not be as 'clean' as they are intended for testing rather than minimal exposure.
 
 ## To-Do
 

@@ -19,6 +19,7 @@
         {
             "type": "shell",
             "label": "CMake Debug",
+            "dependsOn" : "CMake Clean",
             "options": {
                 "cwd": "${workspaceRoot}/build"
             },

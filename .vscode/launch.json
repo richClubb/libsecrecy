@@ -4,47 +4,110 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Debug Tests",
-            "preLaunchTask": "Build Debug",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceRoot}/build/tests/unit/cpp_secrecy_unit_tests",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/build",
-            "environment": [],
-            "externalConsole": false, //set to true to see output in cmd instead
-            "MIMode": "gdb",
-            "miDebuggerPath": "/usr/bin/gdb",
-            "setupCommands": [
-              {
-                "description": "Enable pretty-printing for gdb",
-                "text": "-enable-pretty-printing",
-                "ignoreFailures": true
-              }
-            ] 
-        },
-        {
-          "name": "Debug Example Basic",
-          "preLaunchTask": "Build Debug",
-          "type": "cppdbg",
-          "request": "launch",
-          "program": "${workspaceRoot}/build/examples/basic/cpp_secrecy_basic_example",
-          "args": ["rich", "passwordything"],
-          "stopAtEntry": false,
-          "cwd": "${workspaceFolder}/build",
-          "environment": [],
-          "externalConsole": false, //set to true to see output in cmd instead
-          "MIMode": "gdb",
-          "miDebuggerPath": "/usr/bin/gdb",
-          "setupCommands": [
-            {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-            }
-          ] 
+      {
+        "name": "Debug C tests",
+        "preLaunchTask": "Build Debug",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceRoot}/build/tests/c_tests/unit/c_secrecy_unit_tests",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}/build",
+        "environment": [],
+        "externalConsole": false, //set to true to see output in cmd instead
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ] 
+      },  
+      {
+        "name": "Debug C++ tests",
+        "preLaunchTask": "Build Debug",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceRoot}/build/tests/cpp_tests/unit/cpp_secrecy_unit_tests",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}/build",
+        "environment": [],
+        "externalConsole": false, //set to true to see output in cmd instead
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ] 
+      },
+      {
+        "name": "Debug C build example",
+        "preLaunchTask": "Build Debug",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceRoot}/build/examples/c/basic/c_secrecy_basic_example",
+        "args": ["rich", "passwordything"],
+        "stopAtEntry": false,
+        "cwd": "${workspaceRoot}/build/examples/c/basic/",
+        "environment": [],
+        "externalConsole": false, //set to true to see output in cmd instead
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ] 
+      },
+      {
+        "name": "Debug C++ basic example",
+        "preLaunchTask": "Build Debug",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceRoot}/build/examples/cpp/basic/cpp_secrecy_basic_example",
+        "args": ["rich", "passwordything"],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}/build",
+        "environment": [],
+        "externalConsole": false, //set to true to see output in cmd instead
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ] 
+      },
+      {
+        "name": "Debug C++ using c code example",
+        "preLaunchTask": "Build Debug",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceRoot}/build/examples/cpp/cpp_using_c_secrecy/cpp_using_c_secrecy_example",
+        "args": ["rich", "passwordything"],
+        "stopAtEntry": false,
+        "cwd": "${workspaceRoot}/build/examples/cpp/cpp_using_c_secrecy/",
+        "environment": [],
+        "externalConsole": false, //set to true to see output in cmd instead
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ] 
       }
     ]
 }

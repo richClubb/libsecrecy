@@ -1,5 +1,5 @@
 {
-	"name": "C++ Secrecy Dev Container",
+	"name": "libsecrecy Dev Container",
 	"dockerFile": "Dockerfile",
 	"runArgs": ["--env-file", ".devcontainer/devcontainer.env"],
 	"features": {
