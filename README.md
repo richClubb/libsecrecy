@@ -42,3 +42,4 @@ The unit tests for both (C)[tests/c_tests/unit] and (C++)[tests/cpp_tests/unit] 
 * Fixed memory version?
   * No malloc, suitable for embedded applications with dynamic memory constraints?
   * Might not be possible due to openssl memory allocation behaviour
+    * WolfSSL?
